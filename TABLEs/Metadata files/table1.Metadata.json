@@ -55,7 +55,7 @@
       "COLLATION_NAME": null,
       "COLUMN_COMMENT": "",
       "COLUMN_DEFAULT": null,
-      "COLUMN_KEY": "",
+      "COLUMN_KEY": "MUL",
       "COLUMN_NAME": "table2_id",
       "COLUMN_TYPE": "int",
       "DATA_TYPE": "int",
@@ -74,6 +74,30 @@
     }
   ],
   "Constraints": [
+    {
+      "CHECK_CLAUSE": null,
+      "Columns": [
+        {
+          "COLUMN_NAME": "table2_id",
+          "CONSTRAINT_CATALOG": "def",
+          "CONSTRAINT_NAME": "fk_table1_table2",
+          "ORDINAL_POSITION": 1,
+          "POSITION_IN_UNIQUE_CONSTRAINT": 1,
+          "REFERENCED_COLUMN_NAME": "id",
+          "REFERENCED_TABLE_NAME": "table2",
+          "REFERENCED_TABLE_SCHEMA": "retest1_dev",
+          "TABLE_NAME": "table1"
+        }
+      ],
+      "CONSTRAINT_CATALOG": "def",
+      "CONSTRAINT_NAME": "fk_table1_table2",
+      "CONSTRAINT_TYPE": "FOREIGN KEY",
+      "DELETE_RULE": "NO ACTION",
+      "ENFORCED": "YES",
+      "obj": "table1",
+      "type": "TABLE",
+      "UPDATE_RULE": "NO ACTION"
+    },
     {
       "CHECK_CLAUSE": null,
       "Columns": [
@@ -111,5 +135,24 @@
       "type": "TABLE"
     }
   ],
-  "Indexes": []
+  "Indexes": [
+    {
+      "Columns": [
+        {
+          "COLLATION": "A",
+          "COLUMN_NAME": "table2_id",
+          "INDEX_NAME": "fk_table1_table2",
+          "obj": "table1",
+          "SEQ_IN_INDEX": 1
+        }
+      ],
+      "INDEX_NAME": "fk_table1_table2",
+      "INDEX_TYPE": "BTREE",
+      "IS_VISIBLE": "YES",
+      "NON_UNIQUE": 1,
+      "obj": "table1",
+      "TABLE_CATALOG": "def",
+      "type": "TABLE"
+    }
+  ]
 }
